@@ -7,4 +7,10 @@ describe("getLetterCount - basic functionality", () => {
         const actual = getLetterCount("");
         expect(actual).to.deep.equal(expected);
     });
+
+    it("returns the correct letter count for a word containing only one of each letter", () => {
+        const expected = { c: 1, a: 1, t: 1 };
+        const actual = getLetterCount("cat");
+        expect(actual).to.deep.equal(expected);
+    });
 });
