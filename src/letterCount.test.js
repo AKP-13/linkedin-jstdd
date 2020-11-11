@@ -13,4 +13,10 @@ describe("getLetterCount - basic functionality", () => {
         const actual = getLetterCount("cat");
         expect(actual).to.deep.equal(expected);
     });
+
+    it("returns the correct letter count for words with letters that appear more than once", () => {
+        const expected = { m: 1, i: 4, s: 4, p: 2 };
+        const actual = getLetterCount("mississippi");
+        expect(actual).to.deep.equal(expected);
+    });
 });
