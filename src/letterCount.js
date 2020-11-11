@@ -2,7 +2,7 @@
 // 'better' => { b: 1, e: 2, t: 2, r: 1 }
 
 export const getLetterCount = (string) => {
-    const letters = string.split("");
+    const letters = string.toLowerCase().split("");
     let letterCount = {};
 
     letters.forEach((letter) => {
