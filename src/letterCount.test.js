@@ -25,4 +25,20 @@ describe("getLetterCount - basic functionality", () => {
         const actual = getLetterCount("Mississippi");
         expect(actual).to.deep.equal(expected);
     });
+
+    it("returns the correct letter count regardless of spaces between words", () => {
+        const expected = {
+            h: 2,
+            e: 6,
+            l: 2,
+            o: 2,
+            t: 1,
+            r: 2,
+            v: 1,
+            n: 1,
+            y: 1,
+        };
+        const actual = getLetterCount("Hello there everyone");
+        expect(actual).to.deep.equal(expected);
+    });
 });
