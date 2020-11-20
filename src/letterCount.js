@@ -1,5 +1,5 @@
 export const getLetterCount = (string) => {
-    const letters = string.toLowerCase().split(" ").join("").split("");
+    const letters = string.toLowerCase().split(" ").join("").split("").sort();
     let letterCount = {};
 
     letters.forEach((letter) => {
